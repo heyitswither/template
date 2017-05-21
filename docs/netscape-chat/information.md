@@ -16,8 +16,14 @@
 
 ## Chat Messages
 
-#### You will probably see this as well. This is the format for _all_ join messages, including yours.
-`{"type":"join","message":"username"}`
 
 #### Messages to _and_ from the server are in this format.
 `{"author":"chaten","type":"message","message":"hi"}`
+
+## Status
+
+#### If a user joins, you will receive a message like this
+`{"type":"join","message":"username"}`
+
+#### If a user quits, you will receive a message like this
+`{"type":"quit","message":"username"}`
