@@ -17,8 +17,11 @@
 ## Chat Messages
 
 
-#### Messages to _and_ from the server are in this format.
+#### Messages from the server will be in this format
 `{"author":"chaten","type":"message","message":"hi"}`
+
+#### Messages to the server should be in this format (They should NOT include an author string: This is disregarded by the server and replaced with the username you have authenticated with)
+`{"type":"message","message":"hi"}`
 
 ## Status
 
