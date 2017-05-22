@@ -30,3 +30,11 @@
 
 #### If a user quits, you will receive a message like this
 `{"type":"quit","message":"username"}`
+
+## Managing an Online List
+
+When you connect to the server, you will receive a message like this containing the list of online users
+
+`{"type":"user_list","users":["folder","zachary","stalin"]}`
+
+This can be used to create your online user list, which you can update in realtime based on join and quit packets.
