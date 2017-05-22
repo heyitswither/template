@@ -27,6 +27,24 @@ In case you want to have your client updated and ready before the server makes c
 #### Messages to the server should be in this format (They should NOT include an author string: This is disregarded by the server and replaced with the username you have authenticated with)
 `{"type":"message","message":"hi"}`
 
+## Private Messages
+
+#### To send a private message to another user, you must send a message like this
+
+`{
+  "type": "direct_message",
+  "recipient": "recipients_username",
+  "message": "authors_message"
+}`
+
+#### When you receive a private message, your client will be sent a message like this
+
+`{
+  "type": "direct_message",
+  "author": "author_username",
+  "message": "authors_message"
+}`
+
 ## Status
 
 #### If a user joins, you will receive a message like this
