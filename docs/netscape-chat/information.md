@@ -1,5 +1,9 @@
 # Netscape Chat Communication Information
 
+## Future Proofing your Client
+
+In case you want to have your client updated and ready before the server makes changes, the specification containing current future plans can be found [here](https://gist.github.com/SpoopySaitama/33f45f7bf27151542330ce3a67658ba0).
+
 ## Authentication
 
 #### Send this message when first opening the server connection to authenticate with the server
