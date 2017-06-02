@@ -7,16 +7,16 @@ In case you want to have your client updated and ready before the server makes c
 ## Authentication
 
 #### Send this message when first opening the server connection to authenticate with the server
-`{"password":"your password","author":"your username"}`
+`{"type":"auth", "username":"your username","password":"your password"}`
 
 #### If this is your first time authenticating with a username and it has not yet been registered, you will receive this message
-`{"type":"auth","message":"You have successfully registered a new account and logged in"}`
+`{"type":"auth","new_account":true, "success":true}`
 
 #### If you have logged into a registered name with incorrect credentials, you will receive this message and will not be able to send messages
-`{"type":"auth","message":"Those credentials are incorrect"}`
+`{"type":"auth","new_account":false, "success":false}`
 
 #### If you have logged into an already existing account, you will receive this message
-`{"type":"auth","message":"You have successfully authenticated an already existing account"}`
+`{"type":"auth","new_account":false, "success":true}`
 
 ## Chat Messages
 
@@ -48,10 +48,10 @@ In case you want to have your client updated and ready before the server makes c
 ## Status
 
 #### If a user joins, you will receive a message like this
-`{"type":"join","message":"username"}`
+`{"type":"join","username":"username"}`
 
 #### If a user quits, you will receive a message like this
-`{"type":"quit","message":"username"}`
+`{"type":"quit","username":"username"}`
 
 ## Managing an Online List
 
